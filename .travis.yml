@@ -4,17 +4,24 @@ language: node_js
 node_js: 
   - 17
 
+services:
+  - docker
+
 env:
   global:
     - MY_ENV_VAR=value
 
 before_install:
+  - sudo apt-get update
+  - sudo apt-get install docker-ce
   - npm i --location=global npm@8.11.0
 
 install:
   - npm install
-  
+
 script:
+  - docker build -t final project .
+  - docker run final project npm test
   - npm test
   - echo $MY_ENV_VAR
 
