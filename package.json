@@ -1,0 +1,22 @@
+{
+  "name": "csci-4322",
+  "version": "1.0.0",
+  "description": "final project",
+  "main": "logic.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgordon00/CSCI-4322.git"
+  },
+  "keywords": [
+    "calc"
+  ],
+  "author": "mg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgordon00/CSCI-4322/issues"
+  },
+  "homepage": "https://github.com/mgordon00/CSCI-4322#readme"
+}
