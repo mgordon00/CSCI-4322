@@ -3,8 +3,12 @@ language: node_js
 node_js: 
   - node
 
+env:
+  global:
+    - MY_ENV_VAR=value
 install:
   - npm ci
 
-script
+script:
+  - echo $MY_ENV_VAR
   - npm run lint
