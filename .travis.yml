@@ -7,9 +7,13 @@ node_js:
 env:
   global:
     - MY_ENV_VAR=value
+
+before_install:
+  - npm i -g npm@version-number
 install:
   - npm ci
 
 script:
+  - make test
   - echo $MY_ENV_VAR
   - npm run lint
