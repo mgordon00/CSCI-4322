@@ -9,7 +9,7 @@ env:
     - MY_ENV_VAR=value
 
 before_install:
-  - npm i -g npm@version-number
+  - npm i --location=global npm@8.11.0
 install:
   - npm ci
 
