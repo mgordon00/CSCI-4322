@@ -17,4 +17,12 @@ install:
 script:
   - npm test
   - echo $MY_ENV_VAR
-  - npm run lint
+
+deploy:
+  provider: github
+  skip_cleanup: true
+  on:
+    branch: main
+  token: $GITHUB_TOKEN
+  local_dir: build
+
